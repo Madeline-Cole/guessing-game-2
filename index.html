@@ -4,12 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz</title>
+    <style>
+       h2 {
+        margin-bottom: 10px;
+       }
+       
+    </style>
 </head>
 <body>
     <h1>Quiz</h1>
-    <button id="option-A">Option A</button>
-    <button id="option-B">Option B</button>
-    <button id="option-C">Option C</button>
-    <button id="option-D">Option D</button>
+    <h2>How should you not refer to JavaScript?</h2>
+    <button onclick ="check(this)" class="correct">JS</button>
+    <button onclick ="check(this)">Vanila JS</button>
+    <button onclick ="check(this)">Java</button>
+    <button onclick ="check(this)">ECMAScript</button>
+
+    <h2>What does the C in CSS stand for?</h2>
+    <button onclick ="check(this)" class="correct">Cascading</button>
+    <button onclick ="check(this)">Compounding</button>
+    <button onclick ="check(this)">Crafting</button>
+    <button onclick ="check(this)">Compiling</button>
+
+    <h2>What is the capital of France?</h2>
+    <button id="option-A">Marseille</button>
+    <button id="option-B">Lyon</button>
+    <button id="option-C">Toulouse</button>
+    <button id="option-D">Paris</button>
+
+    <script>
+     function check(button) {
+        if (button.classList.contains("correct"))
+     {
+        button.style.backgroundColor = "green";
+     } else {
+        button.style.backgroundColor = "red";
+     }
+    }
+    </script>
 </body>
 </html>
